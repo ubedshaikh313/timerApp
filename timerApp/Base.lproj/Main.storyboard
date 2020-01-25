@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="timerApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ki4-mF-7Vm">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                <items>
+                                    <navigationItem title="Title" id="1Ib-Cm-iTQ">
+                                        <barButtonItem key="rightBarButtonItem" systemItem="play" id="tN4-WF-xx1">
+                                            <connections>
+                                                <action selector="playButton:" destination="BYZ-38-t0r" id="U0i-VC-pdf"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Olm-O5-QML">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <items>
+                                    <navigationItem title="Title" id="hSr-L9-cVU">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="pause" id="aqW-4q-YWD">
+                                            <connections>
+                                                <action selector="pauseButton:" destination="BYZ-38-t0r" id="TNf-Yw-dFX"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" systemItem="stop" id="iVN-AP-L8O">
+                                            <connections>
+                                                <action selector="crossButton:" destination="BYZ-38-t0r" id="C78-2P-wW9"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gT2-1H-V6P">
+                                <rect key="frame" x="166" y="291" width="43" height="85"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="71"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="gT2-1H-V6P" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="3Wt-eK-s8k"/>
+                            <constraint firstItem="ki4-mF-7Vm" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="6aJ-IY-SFy"/>
+                            <constraint firstItem="Olm-O5-QML" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="9nK-YZ-iFI"/>
+                            <constraint firstItem="ki4-mF-7Vm" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="HF9-rt-6Z0"/>
+                            <constraint firstItem="Olm-O5-QML" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Hcu-38-t8e"/>
+                            <constraint firstItem="ki4-mF-7Vm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="uuF-Kg-ry5"/>
+                            <constraint firstItem="Olm-O5-QML" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="uzf-BN-WWx"/>
+                            <constraint firstItem="gT2-1H-V6P" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yLc-RI-XN0"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="buttonPause" destination="aqW-4q-YWD" id="bpV-rO-oE2"/>
+                        <outlet property="buttonPlay" destination="tN4-WF-xx1" id="ZRx-bo-iCN"/>
+                        <outlet property="buttonStop" destination="iVN-AP-L8O" id="tRW-Oj-eWr"/>
+                        <outlet property="numbersLabel" destination="gT2-1H-V6P" id="aML-fH-RWq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="126.38680659670166"/>
+        </scene>
+    </scenes>
+</document>
